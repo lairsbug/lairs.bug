@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="waste.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Truculenta:opsz,wght@12..72,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="asset/Logo.png" type="image/x-icon" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <title>Contact</title>
+    <style>
+      
+      
+    form#contactForm {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px 25px 20px 25px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      font-weight: 500;
+      color: var(--primary-color);
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      padding: 8px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      background: #fafafa;
+      transition: border-color 0.2s;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #0078d7;
+      outline: none;
+    }
+    button[type="submit"] {
+      background: white;
+      color: var(--secondary-color);
+      border: 0.5px solid var(--secondary-color);
+      padding: 10px 0;
+      border-radius: 40px 0 40px 40px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 200px;
+      height: 60px;
+    }
+    nav a {
+      border: 0.5px solid;
+      border-color: var(--primary-color);
+      font-size: 18px;
+  font-weight: 4  00;
+      padding: 18px 25px;
+      color: var(--primary-color);
+      border-radius: 30px;
+    }
+    button[type="submit"]:hover {
+      background: var(--secondary-color);
+      color: white;
+    }
+    #subjectContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      border: 0.5px solid var(--tertiary-color);
+      border-radius: 50px;
+      margin-bottom: 33px;
+    }
+    #subjectContainer #select {
+      flex: 1;
+      background: none;
+      border: 0;
+      font-size: 20px;
+      color: var(--secondary-color);
+      width: 240px;
+    }
+    textarea {
+      resize: vertical;
+      max-height: 250px;
+      width: 100%;
+      background: none;
+      border: 0.5px solid var(--tertiary-color);
+      border-radius: 50px 50px 0 50px;
+      padding: 30px;
+    }
+    textarea:focus {
+      border-color: var(--tertiary-color);
+      outline: none;
+    }
+    #nameContainer,
+    #emailContainer {
+      display: flex;
+      flex-direction: column;
+      border: 0.5px solid var(--tertiary-color);
+      height: 70px;
+      border-radius: 50px;
+      margin-bottom: 33px;
+    }
+    #nameContainer input,
+    #emailContainer input,
+    #referralContainer input {
+      width: 100%;
+      background: none;
+      border: 0;
+      padding-left: 40px;
+      font-size: 18px;
+      height: 70px;
+      color: var(--secondary-color);
+    }
+    #referralContainer {
+      width: calc(100% - 220px);
+      border-left: 0.5px solid var(--tertiary-color);
+    }
+
+    #submitContainer {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin-top: 20px;
+    }
+    #nav-containers {
+      display: flex;
+  width: 200px;
+  font-size: 24px;
+  justify-content: space-between;
+  font-family: var(--primary-font);
+    }
+    @media (max-width: 900px) {
+      form#contactForm {
+        max-width: 90vw;
+        padding: 20px 10px 15px 10px;
+      }
+      #subjectContainer {
+        flex-direction: column;
+        align-items: stretch;
+        border-radius: 30px;
+        height: 125px;
+      }
+      #subjectContainer #select {
+        width: 100%;
+        font-size: 18px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+      }
+      #subjectContainer #select a {
+        width: 100%;
+        text-align: start;
+        padding: 10px 0 10px 20px;
+      }
+      #referralContainer {
+        width: 100%;
+        border-left: none;
+        border-top: 0.5px solid var(--tertiary-color);
+      }
+      #nameContainer,
+      #emailContainer {
+        height: 60px;
+      }
+      #nameContainer input,
+      #emailContainer input,
+      #referralContainer input {
+        height: 60px;
+        padding-left: 20px;
+        font-size: 16px;
+      }
+      textarea {
+        padding: 20px;
+        font-size: 16px;
+      }
+      button[type="submit"] {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      form#contactForm {
+        max-width: 100vw;
+        margin: 20px 0;
+        padding: 10px 2vw;
+      }
+       #subjectContainer #select {
+        width: 100%;
+        font-size: 18px;
+        height: 50px;
+      }
+      #subjectContainer {
+        margin-bottom: 20px;
+      }
+      #nameContainer,
+      #emailContainer {
+        margin-bottom: 20px;
+      }
+      #submitContainer {
+        justify-content: end;
+      }
+      button[type="submit"] {
+        font-size: 0.9rem;
+      }
+      textarea {
+        padding: 40px 30px;
+        font-size: 15px;
+      }
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="is-center">
+      <div id="nav-sub" class="is-center-vertically">
+        <lb-logo>Lairs<span>Bug</span></lb-logo>
+        <div id="nav-controls" class="is-end-horizontally is-center-vertically">
+          <a href="index.html">Go Back</a>
+          <button><ion-icon name="grid-outline"></ion-icon></button>
+        </div>
+      </div>
+    </nav>
+    <form id="contactForm" autocomplete="off" netlify>
+      <div id="nameContainer">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your name"
+          required
+        />
+      </div>
+      <div id="emailContainer">
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email"
+          required
+        />
+      </div>
+      <div id="subjectContainer">
+        <div
+          id="select"
+          class="dropdown"
+          style="background: none; border: none"
+        >
+          <a
+            class="btn btn-secondary dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            id="dropdownMenuButton"
+            style="
+              background: none;
+              border: none;
+              color: #777777;
+              box-shadow: none;
+              width: 100%;
+            "
+          >
+            Your subject?
+          </a>
+          <ul
+            class="dropdown-menu"
+            style="margin-top: 40px; border: none"
+            aria-labelledby="dropdownMenuButton"
+          >
+            <li><a class="dropdown-item" href="#">Collaboration</a></li>
+            <li><a class="dropdown-item" href="#">Hire</a></li>
+            <li><a class="dropdown-item" href="#">Query</a></li>
+            <li><a class="dropdown-item" href="#">Other</a></li>
+          </ul>
+          <script>
+            document
+              .querySelectorAll(".dropdown-menu .dropdown-item")
+              .forEach(function (item) {
+                item.addEventListener("click", function (e) {
+                  e.preventDefault();
+                  document.getElementById("dropdownMenuButton").innerHTML =
+                    this.innerHTML;
+                });
+              });
+          </script>
+        </div>
+        <div id="referralContainer">
+          <input
+            type="text"
+            id="referral"
+            name="referral"
+            placeholder="How did you find me?"
+            style="font-size: 18px"
+          />
+        </div>
+      </div>
+      <div id="messageContainer">
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          required
+          placeholder="Leave your message here"
+        ></textarea>
+      </div>
+      <div id="submitContainer">
+        <button type="submit">Send</button>
+      </div>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

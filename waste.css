@@ -1,0 +1,16 @@
+/* Custom Scrollbar — LairsBug vibe */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* subtle dark base */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color); /* main thumb */
+}
+
+
+
